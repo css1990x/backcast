@@ -7,6 +7,9 @@ var Video = Backbone.Model.extend({
 
   select: function() {
     this.trigger('select', this);
-  }
-
+  },
+  
+  // getFakeVids: function() {
+  //   this.set('fakeVidz': window.fakeVideoData) 
+  // }
 });
