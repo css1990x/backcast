@@ -4,7 +4,6 @@ describe('VideoListView', function() {
   beforeEach(function() {
     sinon.spy(VideoListView.prototype, 'render');
     sinon.spy(VideoListEntryView.prototype, 'render');
-
     collection = new Videos(fakeVideoData);
     view = new VideoListView({ collection: collection });
   });
@@ -21,6 +20,7 @@ describe('VideoListView', function() {
 
   it('should re-render when video collection updates', function() {
     collection.trigger('sync');
+    
     expect(view.render).to.have.been.called;
   });
 
